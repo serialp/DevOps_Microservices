@@ -20,4 +20,4 @@ EXPOSE 80
 
 ## Step 5:
 # Run app.py at container launch
-CMD [ "python", "app.y" ]
+CMD [ "python", "app.py" ]
