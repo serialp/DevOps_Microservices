@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker Build --tag=mylocalapp .
+docker build --tag=mylocalapp .
 
 # Step 2: 
 # List docker images
