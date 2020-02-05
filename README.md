@@ -25,18 +25,27 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-* Create a virtualenv and activate it
+* Create a virtualenv: (i.e) `python3 -m venv ~/.devops`
+* Activate it: (i.e) `source ~/.devops/bin/activate` 
 * Run `make install` to install the necessary dependencies
+
+### Kubernetes Steps
+
+* [Setup and Configure Docker](https://docs.docker.com/get-docker/)
+* [Setup and Configure Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [Setup and Configure Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
+3. Make a prediction: `./make_prediction.sh`
+4. upload Docker image: `./upload_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+## [Important] Delete Cluster
+
+After you’re done deploying your containerized application and making test predictions via Kubernetes cluster, you should clean up your resources and delete the kubernetes cluster with a call to `minikube delete`.
+
+You can also pause your work and save the cluster state with a call to `minikube stop`.
